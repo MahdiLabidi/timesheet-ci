@@ -17,14 +17,14 @@ public class EntrepriseServiceImplTest {
 	IEntrepriseService es; 
 	
 	
-	@Test
+/*	@Test
 	public void testAjouterEntreprise() throws ParseException {
 		
 			Entreprise e = new Entreprise("Entreprise1","Entreprise1 SAS");
 			Entreprise entrepriseAdded = es.ajouterEntreprise(e);
 			Assert.assertEquals(e.getName(), entrepriseAdded.getName());
 		
-	}
+	}*/
 
 /*	@Test
 	public void testRetrieveAllEntreprises() {
@@ -46,10 +46,10 @@ public class EntrepriseServiceImplTest {
 		Assert.assertEquals(e.getId(), entrepriseUpdated);
 }*/
 
-	@Test
+/*	@Test
 	public void testRetrieveEntreprise() {
 		Entreprise entrepriseRetrieved = es.retrieveEntreprise(1); 
 		Assert.assertEquals(1L, entrepriseRetrieved.getId());
-	}
+	}*/
 
 }

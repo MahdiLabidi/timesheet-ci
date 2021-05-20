@@ -65,7 +65,7 @@ public class UserServiceImplTest {
 		
 		// 5 tests unitaires  
  
-}
+} 
 
 
 
