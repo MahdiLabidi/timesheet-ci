@@ -15,7 +15,7 @@ public class EntrepriseServiceImpl implements IEntrepriseService{
 
 	@Autowired
 	EntrepriseRepository entrepriseRepository;
-	private static final Logger l = LogManager.getLogger(IEntrepriseService.class);
+	private static final Logger l = LogManager.getLogger(EntrepriseServiceImpl.class);
 	
 	@Override
 	public Entreprise ajouterEntreprise(Entreprise e) {
@@ -43,14 +43,19 @@ public class EntrepriseServiceImpl implements IEntrepriseService{
 	}
 
 	@Override
-	public void deleteEntreprise(int id) {
+	public String deleteEntreprise(int id) {
+		l.info("in updateEntreprise id = " + id);
 		entrepriseRepository.deleteById(id);
+		l.info("entreprise deleted id : " + id);
+		return null;
 		
 	}
 
 	@Override
 	public int updateEntreprise(Entreprise e) {
+		l.info("in updateEntreprise id = " + e.getId());
 		entrepriseRepository.save(e);
+		l.info("entreprise updated : " + e);
 		return e.getId();
 	}
 

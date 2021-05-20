@@ -9,7 +9,7 @@ public interface IEntrepriseService {
 	
 	Entreprise ajouterEntreprise(Entreprise e);
 	List<Entreprise> retrieveAllEntreprises();
-	void deleteEntreprise(int id);
+	String deleteEntreprise(int id);
 	int updateEntreprise(Entreprise e);
 	Entreprise retrieveEntreprise(int id);
 	

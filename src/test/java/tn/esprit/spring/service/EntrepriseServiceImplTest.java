@@ -1,10 +1,13 @@
 package tn.esprit.spring.service;
 
-import static org.junit.Assert.*;
+import java.text.ParseException;
+import java.util.List;
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import tn.esprit.spring.entities.Entreprise;
 import tn.esprit.spring.services.IEntrepriseService;
 
 public class EntrepriseServiceImplTest {
@@ -15,28 +18,38 @@ public class EntrepriseServiceImplTest {
 	
 	
 	@Test
-	public void testAjouterEntreprise() {
-		fail("Not yet implemented");
+	public void testAjouterEntreprise() throws ParseException {
+		
+			Entreprise e = new Entreprise("Entreprise1","Entreprise1 SAS");
+			Entreprise entrepriseAdded = es.ajouterEntreprise(e);
+			Assert.assertEquals(e.getName(), entrepriseAdded.getName());
+		
 	}
 
-	@Test
+/*	@Test
 	public void testRetrieveAllEntreprises() {
-		fail("Not yet implemented");
-	}
+		List<Entreprise> listEntreprises = es.retrieveAllEntreprises(); 
+		Assert.assertEquals(2, listEntreprises.size());
+	}*/
 
-	@Test
+/*	@Test
 	public void testDeleteEntreprise() {
-		fail("Not yet implemented");
-	}
+		es.deleteEntreprise(2);
+		Assert.assertNull(es.deleteEntreprise(2));
+	}*/
 
-	@Test
-	public void testUpdateEntreprise() {
-		fail("Not yet implemented");
-	}
+/*	@Test
+	public void testUpdateEntreprise() throws ParseException {
+		
+		Entreprise e = new Entreprise("Entreprise2","Entreprise2 SAS");
+		int entrepriseUpdated = es.updateEntreprise(e);
+		Assert.assertEquals(e.getId(), entrepriseUpdated);
+}*/
 
 	@Test
 	public void testRetrieveEntreprise() {
-		fail("Not yet implemented");
+		Entreprise entrepriseRetrieved = es.retrieveEntreprise(1); 
+		Assert.assertEquals(1L, entrepriseRetrieved.getId());
 	}
 
 }
