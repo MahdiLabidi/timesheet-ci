@@ -53,7 +53,7 @@ public class UserServiceImplTest {
 		@Test
 		public void testRetrieveUser() {
 			User userRetrieved = us.retrieveUser("4"); 
-			Assert.assertEquals(1L, userRetrieved.getId().longValue());
+			Assert.assertEquals(4L, userRetrieved.getId().longValue());
 		}
 		
 /*		@Test
