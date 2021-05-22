@@ -24,12 +24,12 @@ public class UserServiceImplTest {
 		@Autowired
 		IUserService us; 
 	
-/*		@Test
+		@Test
 		public void testRetrieveAllUsers() {
 			List<User> listUsers = us.retrieveAllUsers(); 
 			// if there are 7 users in DB : 
-			Assert.assertEquals(2, listUsers.size());
-		}*/
+			Assert.assertEquals(11, listUsers.size());
+		}
 		
 		
 		@Test
@@ -52,16 +52,16 @@ public class UserServiceImplTest {
 	
 		@Test
 		public void testRetrieveUser() {
-			User userRetrieved = us.retrieveUser("1"); 
+			User userRetrieved = us.retrieveUser("4"); 
 			Assert.assertEquals(1L, userRetrieved.getId().longValue());
 		}
 		
 /*		@Test
 		public void testDeleteUser() {
-			us.deleteUser("2");
-			Assert.assertNull(us.retrieveUser("2"));
-		}*/
-		
+			us.deleteUser("1");
+			Assert.assertNull(us.retrieveUser("1"));
+		}
+		*/
 		// 5 tests unitaires  
  
 } 
